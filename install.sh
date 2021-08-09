@@ -1,9 +1,9 @@
 #Ensure prerequisites are installed (ARCH LINUX ONLY)
 yay -S ckb-next
 echo "installed ckb-next"
-pacman -S flameshot
+sudo pacman -S flameshot
 echo "installed flameshot"
-pacman -S picom
+sudo pacman -S picom
 echo "installed picom"
 yay -S polybar
 echo "installed polybar"
