@@ -1,4 +1,6 @@
-#Ensure prerequisites are installed (ARCH LINUX ONLY)
+# Ensure prerequisites are installed (ARCH LINUX ONLY)
+
+# This doesn't actually work
 yay -S ckb-next
 echo "installed ckb-next"
 sudo pacman -S flameshot
