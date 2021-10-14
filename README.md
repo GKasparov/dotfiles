@@ -4,6 +4,7 @@ Dotfiles for:
 - Polybar
 - Alacritty
 - Picom
+- Fish
 
 And startup scripts
 
