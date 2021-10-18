@@ -5,6 +5,7 @@ Dotfiles for:
 - Alacritty
 - Picom
 - Fish
+- NixOS (configuration.nix file)
 
 And startup scripts
 
