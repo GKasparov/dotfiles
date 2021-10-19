@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      <home-manager/nixos>
       ./hardware-configuration.nix
     ];
 
@@ -27,20 +28,12 @@
     default = "saved";
   };
 
-  # Nixpkgs Config
-
-  nixpkgs.config = {
-    allowUnfree = true;
-    packageOverrides = pkgs: rec {
-      polybar = pkgs.polybar.override {
-        i3Support = true;
-                                      };
-                                 };
-                   };
-
   # Set your time zone.
 
   time.timeZone = "Australia/Sydney";
+
+  # Allow Unfree
+  nixpkgs.config.allowUnfree = true;
 
   # Enable NetworkManager
 
@@ -81,35 +74,57 @@
     opengl.driSupport32Bit = true;
              };
 
-  # Normal Users Config
   users.users.gk = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
-  };
+    extraGroups = [ "wheel" "netowkmanager" ];
+                   };
+
+  # Home Manager
+  home-manager = {
+    users.gk = { pkgs, ... }: {
+    nixpkgs.config = {
+      allowUnfree = true;
+    packageOverrides = pkgs: rec {
+      polybar = pkgs.polybar.override {
+        i3Support = true;
+                                      };
+                                 };
+                     };
+    programs.bash.enable = true;
+      home.packages = [
+        pkgs.neofetch
+        pkgs.wget
+        pkgs.yafetch
+        pkgs.pfetch
+        pkgs.alacritty
+        pkgs.rofi
+        pkgs.polybar
+        pkgs.discord
+        pkgs.steam
+        pkgs.flameshot
+        pkgs.teams
+        pkgs.libreoffice
+        pkgs.gimp
+        pkgs.kdenlive
+        pkgs.feh
+        pkgs.lxappearance
+        pkgs.pavucontrol
+        pkgs.desktop-file-utils
+        pkgs.firefox
+        pkgs.ninja
+        pkgs.meson
+        pkgs.python
+        pkgs.git
+        pkgs.nix-prefetch-git
+        pkgs.unzip
+                      ];
+                              };
+                 };
 
   # Software List
 
   environment.systemPackages = with pkgs; [
-    wget
-    yafetch
-    neofetch
-    pfetch
-    alacritty
-    rofi
-    polybar
-    discord
-    steam
-    flameshot
-    picom
-    teams
-    libreoffice
-    gimp
-    kdenlive
-    feh
-    lxappearance
-    pavucontrol
-    desktop-file-utils
-    firefox
+
   ];
 
   # Set Sys Version
