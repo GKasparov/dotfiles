@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # Start Picom
-exec_always --no-startup-id picom --experimental-backends --blur-method dual_kawase --blur-strength 3 --config /home/gk/.config/picom/picom.conf
+exec_always --no-startup-id picom --config /home/gk/.config/picom/picom.conf
 
 set $mod Mod1
 
