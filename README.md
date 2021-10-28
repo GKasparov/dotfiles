@@ -5,12 +5,9 @@ Dotfiles for:
 - Alacritty
 - Picom
 - Fish
-- NixOS (configuration.nix file)
+- NixOS (configuration.nix)
+- XMonad
 
-And startup scripts
+SOURCE OF MOST OF THESE CONFIGS: DEREK TAYLOR (DistroTube): https://gitlab.com/dwt1/dotfiles
 
-Polybar config has two versions, one for Arch and one for Gentoo. The Arch version colouring takes into consideration that CHECK-AUR-UPDATES module is present. Gentoo, being Gentoo, does not have this module and therefore the colour ordering is slightly altered.
-
-# Notes
-- When installing Polybar on gentoo, ensure you enable i3wm and network USE flags, otherwise those modules will NOT appear. To install Polybar on Gentoo with support for these modules, run: 
-``sudo USE="i3wm network" emerge --ask x11-misc/polybar``
+# Polybar has arch-only stuff, probably won't work well on other distributions
