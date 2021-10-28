@@ -1,1 +1,1 @@
-rofi -width 10 -show run
+rofi -width 12 -show run
