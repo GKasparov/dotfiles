@@ -76,7 +76,7 @@
 
   users.users.gk = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "netorwkmanager" ];
+    extraGroups = [ "wheel" "netorwkmanager" "video" "audio" ];
                    };
 
   # Home Manager
