@@ -76,7 +76,7 @@ myTerminal :: String
 myTerminal = "alacritty"    -- Sets default terminal
 
 myBrowser :: String
-myBrowser = "firefox-beta "  -- Sets qutebrowser as browser
+myBrowser = "firefox "  -- Sets qutebrowser as browser
 
 myEmacs :: String
 myEmacs = "emacsclient -c -a 'emacs' "  -- Makes emacs keybindings easier to type
@@ -103,7 +103,7 @@ myStartupHook = do
     spawnOnce "picom &"
     spawnOnce "nm-applet &"
     spawnOnce "volumeicon &"
-    spawnOnce "conky -c $HOME/.config/conky/xmonad/nord-01.conkyrc"
+    spawnOnce "conky -c $HOME/.config/conky/xmonad/doom-one-01.conkyrc"
     spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 --tint 0x282c34  --height 22 &"
     spawnOnce "/usr/bin/emacs --daemon &" -- emacs daemon for the emacsclient
     spawnOnce "xargs xwallpaper --stretch < ~/.cache/wall"
@@ -333,7 +333,7 @@ myManageHook = composeAll
      , className =? "Yad"             --> doCenterFloat
      , title =? "Oracle VM VirtualBox Manager"  --> doFloat
      -- , title =? "Mozilla Firefox"     --> doShift ( myWorkspaces !! 1 )
-     , className =? "Brave-browser"   --> doShift ( myWorkspaces !! 1 )
+     -- , className =? "Brave-browser"   --> doShift ( myWorkspaces !! 1 )
      , className =? "mpv"             --> doShift ( myWorkspaces !! 7 )
      , className =? "Gimp"            --> doShift ( myWorkspaces !! 8 )
      , className =? "discord"            --> doShift ( myWorkspaces !! 5 )
