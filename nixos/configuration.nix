@@ -57,6 +57,7 @@
       windowManager.default = "i3";
       windowManager.i3.package = pkgs.i3-gaps;
       windowManager.i3.enable = true;
+      windowManager.i3.enale = true'
               };
     printing.enable = true;
     ntp.enable = true;
@@ -121,7 +122,7 @@
                               };
                  };
 
-  # Software List
+  # System-wide Software List
 
   environment.systemPackages = with pkgs; [
 
@@ -134,5 +135,6 @@
   # Fonts
   fonts.fonts = with pkgs; [
     nerdfonts
+    mononoki
   ];
 }
