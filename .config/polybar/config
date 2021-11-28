@@ -14,8 +14,8 @@ compositing-overline = over
 compositing-underline = over
 compositing-border = over
 ; Define fallback values used by all module formats
-format-foreground = #FF0000
-format-background = #00FF00
+format-foreground = #A6ACCD
+format-background = #292D3E
 format-underline =
 format-overline =
 format-spacing =
@@ -507,7 +507,7 @@ label-mode-background = #FFBB00
 label-focused = %icon% %name%
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
-label-focused-underline = #d08e27
+label-focused-underline = #c792ea
 label-focused-padding = 2
 ; Available tokens:
 ;   %name%
@@ -606,29 +606,29 @@ format-background = ${colors.background}
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 1
-content-foreground = #cf871f
+content-foreground = #82aaff
 content-background = #292d3e
 [module/arrow2]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #668bd7
-content-background = #cf871f
+content-foreground = #c792ea
+content-background = #82aaff
 [module/arrow3]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #cf871f
-content-background = #668bd7
+content-foreground = #82aaff
+content-background = #c792ea
 [module/arrowEND]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
 content-foreground = #292d3e
-content-background = #668bd7
+content-background = #c792ea
 ################################################################################
 ###############################################################################
 ############                       MODULES A-Z                      ############
@@ -640,7 +640,7 @@ exec = ~/.config/polybar/scripts/check-all-updates.sh
 interval = 1000
 label = Updates: %output%
 format-foreground = #fefefe
-format-background = #cf871f
+format-background = #82aaff
 format-prefix = "  "
 format-prefix-foreground = #fefefe
 [module/aur-updates]
@@ -794,7 +794,7 @@ type = internal/cpu
 ; Default: 1
 interval = 1
 format-foreground = #fefefe
-format-background = #cf871f
+format-background = #82aaff
 format-prefix = " "
 format-prefix-foreground = #fefefe
 label-font = 1
@@ -824,7 +824,7 @@ time-alt = %l:%M%p
 format-prefix = " "
 format-prefix-foreground = #fefefe
 format-foreground = #fefefe
-format-background = #668bd7
+format-background = #c792ea
 label = "%date% %time% "
 #################################################################
 [module/ewmh]
@@ -989,7 +989,7 @@ format = MEM: <label> USED
 format-prefix = " "
 format-prefix-foreground = #fefefe
 format-foreground = #fefefe
-format-background = #668bd7
+format-background = #c792ea
 ################################################################################
 [module/memory2-free]
 ;https://github.com/jaagr/polybar/wiki/Module:-memory
@@ -1077,7 +1077,7 @@ click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-foreground = #fefefe
-format-background = #668bd7
+format-background = #c792ea
 ################################################################################
 [module/pub-ip]
 ;https://linuxconfig.org/polybar-a-better-wm-panel-for-your-linux-system
@@ -1239,7 +1239,7 @@ format-connected = <label-connected>
 format-connected-prefix = " "
 format-connected-prefix-foreground = #fefefe
 format-connected-foreground = #fefefe
-format-connected-background = #cf871f
+format-connected-background = #82aaff
 #################################################################################
 [module/networkspeeddown]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
@@ -1253,7 +1253,7 @@ format-connected = <label-connected>
 format-connected-prefix = "  "
 format-connected-prefix-foreground = #fefefe
 format-connected-foreground = #fefefe
-format-connected-background = #cf871f
+format-connected-background = #82aaff
 #################################################################################
 [module/wired-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
@@ -1379,9 +1379,9 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 50
 format-prefix = "  "
-format-prefix-underline = #d08e27
-format-underline = #d08e27
-format-foreground = #d08e27
+format-prefix-underline = #c792ea
+format-underline = #c792ea
+format-foreground = #82aaff
 format-background = ${colors.background}
 ###############################################################################
 # vim:ft=dosini
