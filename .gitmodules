@@ -1,0 +1,6 @@
+[submodule "rust.vim"]
+	path = rust.vim
+	url = /home/gk/git/dotfiles/.vim/pack/plugins/start/rust.vim
+[submodule "lightline"]
+	path = lightline
+	url = /home/gk/git/dotfiles/.vim/pack/plugins/start/lightline/
