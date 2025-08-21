@@ -1,0 +1,147 @@
+{
+  "layer": "top",
+  "position": "top",
+  "autohide": true,
+  "autohide-blocked": false,
+  "output": ["DP-1", "HDMI-A-1"],
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  /* === Modules Order === */
+  "modules-left": [
+    "custom/archicon",
+    "clock",
+    "cpu",
+    "memory",
+    "disk",
+    "temperature"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "tray",
+    "wlr/taskbar",
+    "bluetooth",
+    "idle_inhibitor",
+    "pulseaudio",
+    "network",
+    "hyprland/language",
+    "custom/power"
+  ],
+  /* === Modules Left === */
+  "custom/archicon": {
+    "format": "",
+    "on-click": "rofi -show drun -theme-str 'window {width: 30%;}'",
+    "tooltip": false
+  },
+  "clock": {
+    "timezone": "Australia/Sydney",
+    "format": "{:%I:%M:%S  %d, %m}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month"
+    },
+    "interval": 1
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": true,
+    "tooltip-format": "CPU Usage: {usage}%\nNúcleos: {cores}"
+  },
+  "memory": {
+    "format": "{}% 󰍛",
+    "tooltip": true,
+    "tooltip-format": "RAM Usage: {used} / {total} ({percentage}%)"
+  },
+  "disk": {
+    "format": "{percentage_free}% ",
+    "tooltip": true,
+    "tooltip-format": "Free Space: {free} / {total} ({percentage_free}%)"
+  },
+  "temperature": {
+    "format": "{temperatureC}°C {icon}",
+    "tooltip": true,
+    "tooltip-format": "Temperature: {temperatureC}°C\nCritical if > 80°C",
+    "format-icons": [
+      ""
+    ],
+    "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input"
+  },
+  /* === Modules Center === */
+  "hyprland/workspaces": {
+    "id": "workspaces",
+/*    "persistent-workspaces": {
+      "DP-1": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "HDMI-A-1": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    },*/
+    "disable-scroll": true,
+    "all-outputs": false,
+    "sort-by-number": "true",
+    "on-scroll-up": "hyprctl dispatch workspace +1",
+    "on-scroll-down": "hyprctl dispatch workspace -1",
+    "show-special": false
+  },
+  /* === Modules Right === */
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "all-outputs": true,
+    "active-first": true,
+    "tooltip-format": "{name}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "rofi"
+    ]
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "pulseaudio/slider": {
+    "format": "{volume}%",
+    "tooltip": false,
+    "on-click": "pavucontrol"
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-ethernet": "{ifname} 󰈀",
+    "format-disconnected": " ",
+    "tooltip-format": " {ifname} via {gwaddr}",
+    "tooltip-format-ethernet": " {ifname} {ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "hyprland/language": {
+    "format": "{} ",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+    "format-es": "ESP",
+    "format-en": "ENG"
+  },
+  "tray": {
+	"icon-size": 21,
+	"spacing": 10,
+  },
+  "bluetooth": {
+  	"on-click": "kitty -e bluetui",
+  },
+  "custom/power": {
+	"format" : "",
+	"tooltip" : "Power Menu",
+	"on-click" : "~/.config/waybar/scripts/powermenu.sh"
+  },
+}

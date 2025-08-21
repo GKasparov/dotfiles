@@ -1,0 +1,9 @@
+
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+cofiguration {
+    show-scrollbar: false;
+}
+
+listview {
+    scrollbar: false;
+}
